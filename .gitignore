@@ -1,0 +1,27 @@
+# Ambientes virtuais locais
+.venv/
+venv/
+env/
+
+# Ambiente de aula / configuração local
+.aulas/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# VS Code
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de ambiente local
+.env
+.env.*
+
+# Jupyter
+.ipynb_checkpoints/
