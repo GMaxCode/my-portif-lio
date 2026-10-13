@@ -5,25 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfólio de um futuro Software Engineer em formação, com foco em engenharia de software, desenvolvimento e design de produtos."
+      content="Portifólio de um futuro Software Engineer em formação, com foco em engenharia de software, desenvolvimento e design de produtos."
     />
     <title>Futuro Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&family=Caveat:wght@400;500;600;700&family=Archivo+Black&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Figurinhas decorativas espalhadas pela página -->
+    <div class="floating-decor" aria-hidden="true" id="floating-decor"></div>
+
     <div class="page-shell">
       <header class="topbar">
         <nav class="navbar" aria-label="Navegação principal">
           <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#work">Projects</a>
+            <span class="nav-icon" aria-hidden="true">◆</span>
+            <a href="#home" class="nav-pill">★ Home</a>
+            <a href="#about" class="nav-pill">⌂ About</a>
+            <a href="#work" class="nav-pill">▦ Case Study</a>
+            <a href="#about" class="nav-pill">◆ Playground</a>
           </div>
 
           <div class="logo" aria-label="Logo do portfolio">
@@ -32,49 +37,31 @@
           </div>
 
           <div class="nav-actions">
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-            <a href="#contact" class="contact-pill">Hire me</a>
+            <a href="#contact" class="nav-pill contact">♥ Contact</a>
           </div>
         </nav>
       </header>
+
       <main>
         <section class="hero" id="home">
-          <div class="hero-content">
-            <span class="tag">Future Software Engineer</span>
-            <h1>
-              <span>Futuro</span>
-              <span class="outline">Software Engineer</span>
-            </h1>
-            <p class="subtitle">
-              Desenvolvedor em formação em Análise e Desenvolvimento de Sistemas,
-              com foco em Engenharia de Software, arquitetura de soluções,
-              experiência do usuário e produtos digitais bem pensados.
-            </p>
-            <div class="cta-row">
-              <a href="#work" class="btn btn-primary">Projetos</a>
-              <a href="#about" class="btn btn-secondary">Sobre mim</a>
-            </div>
-          </div>
+          <span class="robin-tag tag-mint   tag-tl">Code things</span>
+          <span class="robin-tag tag-yellow tag-tr">Small details</span>
+          <span class="robin-tag tag-pink   tag-bl">Future Engineer</span>
+          <span class="robin-tag tag-blue   tag-br">Open to work</span>
 
-          <div class="hero-visual" aria-label="Arte principal do portfolio">
-            <div class="floating-asset orange floating-card-1">UX</div>
-            <div class="floating-asset green floating-card-2">Code</div>
-            <div class="floating-asset lilac floating-card-3">API</div>
-            <div class="floating-asset pink floating-card-4">Design</div>
+          <figure class="polaroid polaroid-left">
+            <img src="fotos/foto eu/IMG_8958.jpg" alt="Foto do autor" onerror="this.src='fotos/foto eu/minha imag.jpg'" />
+          </figure>
 
-            <div class="portrait-frame">
-              <img
-                src="fotos/foto eu/IMG_8958.jpg"
-                alt="Foto do autor"
+          <figure class="polaroid polaroid-right">
+            <img src="fotos/foto eu/minha imag.jpg" alt="Foto do autor" onerror="this.style.background='#d3d3d3'" />
+          </figure>
 
-                onerror="this.parentElement.classList.add('fallback')"
-              />
-              <div class="portrait-fallback">Futuro<br />Engineer</div>
-            </div>
-
-            <div class="doodle doodle-left" aria-hidden="true"></div>
-            <div class="doodle doodle-right" aria-hidden="true"></div>
+          <div class="hero-robin">
+            <p class="hero-my-name">my name is</p>
+            <h1 class="robin-name">Guilherme<br />Máximo</h1>
+            <p class="hero-line">"Don't give up on your dreams."</p>
+            <a href="#contact" class="btn-contact">Contact me</a>
           </div>
         </section>
 
@@ -82,75 +69,216 @@
           <div class="values">
             <article class="value-card">
               <h3>Software</h3>
-              <p>
-                Construo aplicações com foco em clareza, qualidade e escalabilidade.
-              </p>
+              <p>Construo aplicações com foco em clareza, qualidade e escalabilidade.</p>
             </article>
 
             <article class="value-card">
               <h3>User-first</h3>
-              <p>
-                Transformo problemas em experiências intuitivas e funcionalmente fortes.
-              </p>
+              <p>Transformo problemas em experiências intuitivas e funcionalmente fortes.</p>
             </article>
 
             <article class="value-card">
               <h3>Growth</h3>
-              <p>
-                Aprendo rápido, me adapto ao mercado e busco impacto real em cada projeto.
-              </p>
+              <p>Aprendo rápido, me adapto ao mercado e busco impacto real em cada projeto.</p>
             </article>
           </div>
         </section>
 
         <div class="main-content">
-          <div class="about-intro">About me</div>
-
-          <h2 class="heading-xl">Designing thoughtful software for the future.</h2>
-
-          <div class="mini-gallery" id="skills" aria-label="Figurinhas decorativas do portfólio">
-            <figure class="mini-art mini-art-1">
-              <img src="fotos/fotos figuras/Code Logo.jpg" alt="Figura decorativa de código" />
-            </figure>
-            <figure class="mini-art mini-art-2">
-              <img src="fotos/fotos figuras/download (7).jpg" alt="Figura decorativa de interface" />
-            </figure>
-            <figure class="mini-art mini-art-3">
-              <img src="fotos/fotos figuras/No way out.jpg" alt="Figura decorativa de arte digital" />
-            </figure>
-            <figure class="mini-art mini-art-4">
-              <img src="fotos/fotos figuras/AESTHETIC BOLD AGENCY BRANDING - @CLARADESIGN_CO.jpg" alt="Figura decorativa de branding" />
-            </figure>
-          </div>
-
           <section class="about" id="about">
-            <div class="photo-spot">
-              <img src="fotos/foto eu/minha imag.jpg" alt="Minha foto" onerror="this.style.display='none'
-              ; this.parentElement.classList.add('fallback-photo')" />
-              <span class="mini-tag">Future Engineer</span>
-            </div>
+            <div class="about-with-photos">
+              <figure class="about-photo about-photo-left">
+                <img src="fotos/foto eu/fotogg1.jpeg" alt="Foto 1" onerror="this.parentElement.classList.add('fallback')" />
+              </figure>
 
-            <div class="about-copy">
-              <h2>Eu crio software que conecta tecnologia e propósito.</h2>
-              <p>
-                Sou estudante de Análise e Desenvolvimento de Sistemas com interesse
-                crescente em Engenharia de Software, arquitetura de sistemas, qualidade
-                de código e UX. Meu objetivo é unir lógica, design e solução prática para
-                entregar experiências que funcionem bem e façam sentido para as pessoas.
-              </p>
-              <p>
-                Gosto de estudar desenvolvimento, prototipagem, APIs, boas práticas e
-                padrões de software, sempre buscando evoluir como profissional e como
-                pensador de produtos digitais.
-              </p>
+              <div class="about-copy">
+                <span class="about-pill">what's up</span>
+                <h2>Construindo meu futuro na tecnologia</h2>
+                <p>
+                  Sou estudante de Análise e Desenvolvimento de Sistemas no UNASP – Centro Universitário Adventista de São Paulo, campus Hortolândia (UNASP-HT), e estou construindo minha trajetória na área de Tecnologia da Informação com dedicação, curiosidade e vontade constante de aprender.
+                </p>
+                <p>
+                  Tenho buscado desenvolver minhas habilidades por meio dos estudos e de projetos práticos, explorando diferentes tecnologias e aprimorando minha capacidade de resolver problemas. Acredito que ser um bom profissional vai além de saber programar: envolve disciplina, pensamento lógico, responsabilidade, colaboração e disposição para evoluir continuamente.
+                </p>
+                <p>
+                  Meu objetivo é me tornar um Engenheiro de Software, capaz de desenvolver soluções eficientes, confiáveis e que realmente façam a diferença na vida das pessoas e nos negócios.
+                </p>
+                <p>
+                  Este portfólio representa parte da minha jornada, dos conhecimentos que venho adquirindo e do profissional que estou me dedicando a construir.
+                </p>
 
-              <div class="skill-cloud" aria-label="habilidades e áreas de estudo">
-                <span>Python</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>UX</span>
-                <span>APIs</span>
-                <span>Software</span>
-                <span>Clean Code</span>
+                <div class="skill-pills" aria-label="habilidades e áreas de estudo">
+                  <span class="skill-pill p-blue">Python</span>
+                  <span class="skill-pill p-yellow">HTML &amp; CSS</span>
+                  <span class="skill-pill p-pink">JavaScript</span>
+                  <span class="skill-pill p-mint">APIs &amp; UX</span>
+                </div>
               </div>
+
+              <figure class="about-photo about-photo-right">
+                <img src="fotos/foto eu/fotogg2.jpeg" alt="Foto 2" onerror="this.parentElement.classList.add('fallback')" />
+              </figure>
+            </div>
+          </section>
+
+          <section class="project-section" id="work">
+            <h2 class="heading-xl" style="margin-bottom: 18px;">Projects</h2>
+
+            <div class="project-grid">
+              <article class="project-card bg-blue">
+                <span class="project-tag">Backend</span>
+                <header class="project-header">
+                  <span>+ Project 01</span>
+                  <span class="dot" aria-hidden="true"></span>
+                </header>
+                <div class="project-terminal">
+                  <div class="project-terminal-body"><span class="prompt">$</span> <span class="cmd">python cadastro.py</span>
+<span class="out">› nome: João Silva</span>
+<span class="out">› email: joao@email.com</span>
+<span class="ok">✓ usuário salvo (id=042)</span></div>
+                </div>
+                <div class="project-body">
+                  <h3>Cadastro de Usuários</h3>
+                  <p>Sistema em Python para cadastrar e gerenciar usuários, com foco em lógica de programação e organização de informações.</p>
+                </div>
+              </article>
+
+              <article class="project-card bg-black">
+                <span class="project-tag">Dados · BI</span>
+                <header class="project-header">
+                  <span>+ Project 02</span>
+                  <span class="dot" aria-hidden="true"></span>
+                </header>
+                <div class="project-terminal">
+                  <div class="project-terminal-body"><span class="prompt">$</span> <span class="cmd">python etl_bi.py</span>
+<span class="out">› carregando 14.2k linhas…</span>
+<span class="ok">✓ fato_vendas ok</span>
+<span class="ok">✓ dim_cliente   ok</span>
+<span class="warn">! 3 outliers sinalizados</span></div>
+                </div>
+                <div class="project-body">
+                  <h3>Banco de Dados BI</h3>
+                  <p>Estruturação e organização de dados para apoiar análises de Business Intelligence e tomada de decisão.</p>
+                </div>
+              </article>
+
+              <article class="project-card bg-yellow">
+                <span class="project-tag">Dashboard</span>
+                <header class="project-header">
+                  <span>+ Project 03</span>
+                  <span class="dot" aria-hidden="true"></span>
+                </header>
+                <div class="project-terminal dashboard-image">
+                  <img src="fotos/fotos figuras/Deshboard.png" alt="Captura do Dashboard Comercial" onerror="this.parentElement.innerHTML='<div class=&quot;project-terminal-body&quot;><span class=&quot;prompt&quot;>$</span> <span class=&quot;cmd&quot;>streamlit run app.py</span>\n<span class=&quot;out&quot;>› http://localhost:8501</span>\n<span class=&quot;ok&quot;>● Receita   R$ 48.2k ↑12%</span>\n<span class=&quot;warn&quot;>● Conversão 2.1% ↓0.4%</span>\n<span class=&quot;ok&quot;>● Leads     1.284  ↑8%</span></div>'" />
+                </div>
+                <div class="project-body">
+                  <h3>Dashboard Comercial</h3>
+                  <p>Painel visual com indicadores de vendas para acompanhar resultados e analisar informações comerciais.</p>
+                </div>
+              </article>
+
+              <article class="project-card bg-mint">
+                <span class="project-tag">Utilitário</span>
+                <header class="project-header">
+                  <span>+ Project 04</span>
+                  <span class="dot" aria-hidden="true"></span>
+                </header>
+                <div class="project-terminal">
+                  <div class="project-terminal-body"><span class="prompt">$</span> <span class="cmd">python fty.py</span>
+<span class="out">› produzidos:   980</span>
+<span class="out">› reprovados:    22</span>
+<span class="ok">✓ FTY = 97,76%  ✔ meta 95%</span></div>
+                </div>
+                <div class="project-body">
+                  <h3>Calculadora de FTY</h3>
+                  <p>Calculadora que mede o First Time Yield: itens concluídos corretamente na primeira tentativa, sem retrabalho.</p>
+                </div>
+              </article>
+
+              <article class="project-card bg-blue">
+                <span class="project-tag">Python</span>
+                <header class="project-header">
+                  <span>+ Project 05</span>
+                  <span class="dot" aria-hidden="true"></span>
+                </header>
+                <div class="project-terminal">
+                  <div class="project-terminal-body"><span class="prompt">$</span> <span class="cmd">python calc.py</span>
+<span class="out">› 12 + 7 * 3 =</span>
+<span class="ok">33</span>
+<span class="out">› (12 + 7) * 3 =</span>
+<span class="ok">57</span></div>
+                </div>
+                <div class="project-body">
+                  <h3>Calculadora Interativa</h3>
+                  <p>Aplicação em Python com interface interativa para operações matemáticas com entrada de valores do usuário.</p>
+                </div>
+              </article>
+
+              <article class="project-card bg-black">
+                <span class="project-tag">Bot</span>
+                <header class="project-header">
+                  <span>+ Project 06</span>
+                  <span class="dot" aria-hidden="true"></span>
+                </header>
+                <div class="project-terminal">
+                  <div class="project-terminal-body"><span class="prompt">$</span> <span class="cmd">python cpfbot.py</span>
+<span class="out">› CPF  529.982.247-25</span>
+<span class="ok">✓ válido</span>
+<span class="out">› CPF  111.111.111-11</span>
+<span class="warn">✗ inválido (repetido)</span></div>
+                </div>
+                <div class="project-body">
+                  <h3>Validador CPF Bot</h3>
+                  <p>Bot que aplica as regras de validação para identificar CPFs válidos e inválidos via lógica de programação.</p>
+                </div>
+              </article>
+
+              <article class="project-card bg-yellow">
+                <span class="project-tag">Automação</span>
+                <header class="project-header">
+                  <span>+ Project 07</span>
+                  <span class="dot" aria-hidden="true"></span>
+                </header>
+                <div class="project-terminal">
+                  <div class="project-terminal-body"><span class="prompt">$</span> <span class="cmd">python climate.py --city=SP</span>
+<span class="ok">✓ São Paulo · 24°C · ☀</span>
+<span class="out">› agendando notificação…</span>
+<span class="ok">✔ alerta enviado às 07:00</span></div>
+                </div>
+                <div class="project-body">
+                  <h3>ClimateNotify PY</h3>
+                  <p>Consulta informações climáticas e envia notificações meteorológicas, automatizando o acompanhamento do tempo.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="contact-card-section" id="contact">
+            <div class="contact-card">
+              <div class="contact-card-top">
+                <span class="contact-pill">let's talk</span>
+                <span class="contact-stamp">FSE · 2026</span>
+              </div>
+              <h2 class="contact-name">Guilherme<br /><em>Gomes Máximo</em></h2>
+              <p class="contact-role">Future Software Engineer · open to opportunities</p>
+              <div class="contact-divider"></div>
+              <a href="tel:+5569993597000" class="contact-phone">
+                <span class="contact-phone-icon" aria-hidden="true">☎</span>
+                <span class="contact-phone-text">
+                  <span class="contact-phone-label">call me</span>
+                  <span class="contact-phone-number">(69) 99359-7000</span>
+                </span>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <footer class="footer">
+          <p>© 2026 — feito com <span>cuidado</span> por Guilherme Gomes Máximo</p>
+        </footer>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
