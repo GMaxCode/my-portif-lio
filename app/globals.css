@@ -1,0 +1,189 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@source "../app";
+@source "../components";
+
+@theme {
+  --color-forest: #00352e;
+  --color-forest-deep: #022b25;
+  --color-forest-ink: #012420;
+  --color-beige: #d5cfc8;
+  --color-sage: #8fbf98;
+  --color-mint: #b8e6c1;
+  --color-ink: #0b3a32;
+  --font-display: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --shadow-folder: 0 18px 40px -18px rgba(0, 20, 17, 0.55);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    min-width: 320px;
+    overflow-x: hidden;
+    background: var(--color-forest);
+    color: var(--color-mint);
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background: var(--color-sage);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-mint);
+    outline-offset: 4px;
+  }
+}
+
+@layer components {
+  .folder-stack {
+    --band-h: 3.1rem;
+    --band-step: 1.22rem;
+    --band-left: 12%;
+    position: relative;
+    height: 8.5rem;
+    margin-top: 1.25rem;
+  }
+
+  .folder-band {
+    position: absolute;
+    height: var(--band-h);
+    border: 0;
+    border-radius: 0.7rem;
+    box-shadow: var(--shadow-folder);
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .folder-band::after {
+    position: absolute;
+    inset: 0 0 auto;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.42);
+    content: "";
+  }
+
+  .folder-tab {
+    position: absolute;
+    bottom: 100%;
+    left: 5%;
+    display: inline-flex;
+    height: 1.7rem;
+    align-items: center;
+    padding-inline: 1rem;
+    border: 0;
+    border-radius: 0.65rem 0.65rem 0 0;
+    box-shadow: 0 8px 18px -10px rgba(0, 20, 17, 0.5);
+    color: var(--color-ink);
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .folder-year {
+    bottom: 0;
+    left: 2%;
+    z-index: 30;
+    color: var(--color-mint);
+  }
+
+  .panel-tab {
+    top: 0;
+    left: 2rem;
+    z-index: 2;
+    height: 2.45rem;
+    padding-inline: 1.25rem;
+    cursor: pointer;
+  }
+
+  .folder-panel {
+    transform-origin: top center;
+  }
+
+  .project-modal-backdrop {
+    position: fixed;
+    z-index: 50;
+    inset: 0;
+    display: grid;
+    overflow-y: auto;
+    place-items: center;
+    padding: 1.25rem;
+    background: rgba(0, 18, 15, 0.78);
+    backdrop-filter: blur(8px);
+  }
+
+  .project-modal {
+    position: relative;
+    width: min(100%, 42rem);
+    border: 1px solid rgba(184, 230, 193, 0.2);
+    border-radius: 1.5rem;
+    background: var(--color-forest-deep);
+    padding: 2rem;
+    box-shadow: var(--shadow-folder);
+  }
+
+  .portfolio-cursor {
+    position: fixed;
+    z-index: 60;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgba(184, 230, 193, 0.9);
+    border-radius: 9999px;
+    background: rgba(184, 230, 193, 0.25);
+    pointer-events: none;
+  }
+
+  .flower-rotate {
+    animation: flower-spin 36s linear infinite;
+  }
+}
+
+@media (min-width: 640px) {
+  .folder-stack {
+    --band-h: 4rem;
+    --band-step: 1.6rem;
+    height: 11rem;
+  }
+
+  .folder-tab {
+    height: 1.9rem;
+    padding-inline: 1.2rem;
+    font-size: 0.66rem;
+    letter-spacing: 0.22em;
+  }
+}
+
+@keyframes flower-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
