@@ -129,7 +129,7 @@ export default function FolderPanel({
                   </p>
                 </div>
                 <span className="shrink-0 font-display text-[10px] uppercase tracking-[0.17em] text-sage">
-                  {course.hours} · {course.year}
+                  {'hours' in course ? `${course.hours} · ${course.year}` : course.year}
                 </span>
               </motion.li>
             ))}

@@ -65,6 +65,8 @@ export const portfolio = {
     status: 'Em andamento',
   },
   courses: [
+    { title: 'Python for Data Science', provider: 'IBM', year: '2026' },
+    { title: 'Enterprise Design Thinking Practitioner', provider: 'IBM', year: '2026' },
     { title: 'Introdução à Análise de Dados – Microsoft Power BI', provider: 'Fundação Bradesco', hours: '5h', year: '2026' },
     { title: 'Linguagem de Programação Orientada a Objetos', provider: 'Mundi', hours: '40h', year: '2026' },
     { title: 'Lógica de Programação', provider: 'Tybe', hours: '10h', year: '2026' },
