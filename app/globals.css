@@ -61,6 +61,7 @@
     border-radius: 0.7rem;
     box-shadow: var(--shadow-folder);
     cursor: pointer;
+    pointer-events: none;
     text-align: left;
   }
 
@@ -90,6 +91,7 @@
     letter-spacing: 0.19em;
     text-transform: uppercase;
     white-space: nowrap;
+    pointer-events: auto;
   }
 
   .folder-year {

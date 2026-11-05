@@ -64,11 +64,9 @@ export default function Cover({ onOpen }: { onOpen: (id: FolderId) => void }) {
       <div className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col">
         <motion.div className="folder-stack" style={{ x: parallaxX, y: parallaxY }}>
           {portfolio.folders.map((folder, index) => (
-            <motion.button
+            <motion.div
               key={folder.id}
-              type="button"
               layoutId={`folder-${folder.id}`}
-              aria-label={`Abrir pasta ${folder.label}`}
               initial={reduceMotion ? false : { x: -56, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{
@@ -85,12 +83,20 @@ export default function Cover({ onOpen }: { onOpen: (id: FolderId) => void }) {
                 top: `calc(var(--band-step) * ${lastFolder - index})`,
                 width: `calc(100% - var(--band-left) * ${index})`,
                 zIndex: 10 + lastFolder - index,
+                pointerEvents: 'none',
               }}
             >
-              <span className={`folder-tab ${folder.tone === 'beige' ? 'bg-beige' : 'bg-sage'}`}>
+              <motion.button
+                type="button"
+                aria-label={`Abrir pasta ${folder.label}`}
+                onClick={() => onOpen(folder.id)}
+                className={`folder-tab ${folder.tone === 'beige' ? 'bg-beige' : 'bg-sage'}`}
+                whileHover={reduceMotion ? undefined : { y: -3 }}
+                style={{ pointerEvents: 'auto', cursor: 'pointer' }}
+              >
                 ( {folder.label} )
-              </span>
-            </motion.button>
+              </motion.button>
+            </motion.div>
           ))}
 
           <motion.span
